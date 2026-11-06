@@ -102,6 +102,9 @@
                 <TextBlock Text="Location" FontSize="11"/>
                 <TextBox Name="txtLocation"/>
                 <Button Name="btnreg" Content="＋  Register" Click="btnreg_Click" Margin="0,5,0,0"/>
+                <TextBlock Text="Search"></TextBlock>
+                <TextBox Name="txtsearch"></TextBox>
+                <Button Content="Search" Click="Button_Click"></Button> 
             </StackPanel>
         </Border>
 

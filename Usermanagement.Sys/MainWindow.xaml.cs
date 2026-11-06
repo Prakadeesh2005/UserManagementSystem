@@ -59,7 +59,7 @@ namespace User_Management
             listuser.ItemsSource = list;
 
             txtUserCount.Text = list.Count + (list.Count == 1 ? "user" : "users");
-            txtStatus.Text = txtname.Text + "registered successfully";
+            txtStatus.Text = txtname.Text + "registered successfully"; 
              
         }
         private void cmbnames_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -72,6 +72,16 @@ namespace User_Management
                 txtPhone.Text = value.phone;
                 txtLocation.Text = value.locations;
             }
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // var listitem = from l in list
+            //              where l.name.Contains(txtsearch.Text)
+            //            select l;
+            var listitem = list.Where(l => l.name.Contains(txtsearch.Text)).ToList();
+            //optional-listuser.ItemsSource=listitem;
+            listuser.ItemsSource= listitem;
+        
         }
 
     }
